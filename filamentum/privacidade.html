@@ -17,13 +17,23 @@
   <p>Esta política explica quais dados o aplicativo Android <strong>Filamentum</strong> (pacote <code>io.github.rifocamargo.filamentum</code>) trata e por quê. O app é desenvolvido por Ricardo Camargo, que é o controlador dos dados descritos aqui, nos termos da Lei Geral de Proteção de Dados (LGPD).</p>
 
   <h2>1. Dados que você cadastra no app</h2>
-  <p>Filamentos, acessórios, impressoras, produtos, vendas, consignações, lojas e despesas ficam armazenados <strong>somente no seu aparelho</strong>. O Filamentum não tem servidor, não exige cadastro nem login e não envia esses dados ao desenvolvedor.</p>
+  <p>Filamentos, acessórios, impressoras, produtos, vendas, consignações, lojas e despesas ficam armazenados <strong>somente no seu aparelho</strong>. O Filamentum não tem servidor, não exige cadastro nem login e não envia esses dados ao desenvolvedor. A única exceção é a leitura por foto com IA, descrita no item 2, que envia ao Google apenas a foto que você escolher.</p>
   <ul>
     <li><strong>Backup automático do Android:</strong> se estiver ativado no seu aparelho, o Android pode incluir o banco de dados do app no backup da sua conta Google. Esse backup é feito pelo Google, na sua conta, e você o controla nas configurações do Android.</li>
     <li><strong>Arquivos que você exporta</strong> (backup, relatórios em PDF, perfis do Bambu Studio) são salvos ou compartilhados apenas para onde você escolher.</li>
   </ul>
 
-  <h2>2. Anúncios (Google AdMob)</h2>
+  <h2>2. Leitura por foto com IA (Google Gemini)</h2>
+  <p>Nos cadastros de filamento e de produto, o botão <em>Tirar foto</em> ou <em>Da galeria</em> preenche o formulário a partir de uma imagem: a etiqueta do rolo ou da caixa (marca, tipo, cor e peso) ou a tela do fatiador (tempo de impressão e gramas de cada filamento). O uso é opcional e acontece só quando você toca no botão.</p>
+  <ul>
+    <li><strong>O que é enviado:</strong> somente a foto escolhida, reduzida de tamanho, é enviada ao <strong>Google Gemini</strong> pelo serviço Firebase AI Logic, do Google, para extrair esses dados. O resultado aparece no formulário para você conferir; nada é salvo sem você tocar em salvar.</li>
+    <li><strong>O que não acontece:</strong> o desenvolvedor não recebe a foto, e o app não a guarda: ela é apagada do aparelho logo após a leitura.</li>
+    <li><strong>Uso pelo Google:</strong> o app usa o nível gratuito da API Gemini. Nesse nível, o Google pode usar o conteúdo enviado para melhorar os produtos dele, e pessoas podem revisá-lo, conforme os <a href="https://ai.google.dev/gemini-api/terms">Termos Adicionais da API Gemini</a>. O processamento pode ocorrer em servidores do Google fora do Brasil. Por isso, <strong>não fotografe documentos, pessoas ou informações pessoais</strong>, só a etiqueta ou a tela do fatiador.</li>
+    <li><strong>Proteção contra abuso:</strong> para que apenas o app genuíno use o serviço, o Firebase App Check verifica a integridade do app e do aparelho (Play Integrity do Google Play) e envia ao Google informações técnicas, como a versão do app e do sistema.</li>
+    <li><strong>Sem internet ou após o limite diário:</strong> o app lê o texto da foto no próprio aparelho (Google ML Kit), sem enviar a imagem. O app guarda localmente apenas quantas leituras com IA foram feitas no dia.</li>
+  </ul>
+
+  <h2>3. Anúncios (Google AdMob)</h2>
   <p>A versão gratuita exibe anúncios fornecidos pelo Google AdMob. Para isso, o SDK do Google pode coletar e processar dados como o <strong>ID de publicidade do Android</strong>, endereço IP, informações do aparelho e do sistema, e interações com os anúncios — e, em aparelhos compatíveis, as APIs de publicidade do próprio Android (Privacy Sandbox, como Topics e atribuição) — para exibir anúncios, medir resultados, evitar fraudes e, quando você permitir, personalizar anúncios.</p>
   <ul>
     <li>Quando exigido pela legislação da sua região, o app pede seu <strong>consentimento</strong> antes de carregar anúncios, usando a plataforma de mensagens de privacidade do Google. Você pode rever sua escolha em <em>Mais → Privacidade dos anúncios</em>, quando disponível.</li>
@@ -31,25 +41,25 @@
     <li>Saiba como o Google usa esses dados: <a href="https://policies.google.com/technologies/partner-sites">Como o Google usa informações de sites ou apps que usam nossos serviços</a>.</li>
   </ul>
 
-  <h2>3. Compra "Remover anúncios" (Google Play)</h2>
+  <h2>4. Compra "Remover anúncios" (Google Play)</h2>
   <p>A compra é processada inteiramente pelo Google Play. O app recebe apenas a confirmação de que a compra existe, para desativar os anúncios; dados de pagamento nunca passam pelo app nem pelo desenvolvedor.</p>
 
-  <h2>4. Compartilhamento</h2>
-  <p>O desenvolvedor não vende nem compartilha seus dados. Os únicos terceiros envolvidos são o Google (AdMob, Google Play e, se você usar, o backup do Android), conforme descrito acima e nas políticas do próprio Google.</p>
+  <h2>5. Compartilhamento</h2>
+  <p>O desenvolvedor não vende nem compartilha seus dados. Os únicos terceiros envolvidos são o Google (AdMob, Google Play, Firebase com a API Gemini quando você usa a leitura por foto e, se ativado, o backup do Android), conforme descrito acima e nas políticas do próprio Google.</p>
 
-  <h2>5. Crianças</h2>
+  <h2>6. Crianças</h2>
   <p>O Filamentum é uma ferramenta de gestão para adultos e não é direcionado a menores de 13 anos.</p>
 
-  <h2>6. Seus direitos</h2>
-  <p>Como os dados do app ficam no seu aparelho, você pode consultá-los, corrigi-los ou excluí-los a qualquer momento no próprio app, ou apagar tudo desinstalando o app ou limpando os dados dele nas configurações do Android. Sobre dados tratados pelo Google para anúncios, consulte as ferramentas de privacidade da sua conta Google.</p>
+  <h2>7. Seus direitos</h2>
+  <p>Como os dados do app ficam no seu aparelho, você pode consultá-los, corrigi-los ou excluí-los a qualquer momento no próprio app, ou apagar tudo desinstalando o app ou limpando os dados dele nas configurações do Android. Sobre dados tratados pelo Google para anúncios ou na leitura por foto, consulte as ferramentas de privacidade da sua conta Google e as políticas do Google.</p>
 
-  <h2>7. Segurança</h2>
-  <p>Os dados ficam na área privada do app no Android, inacessível a outros apps. O app não solicita permissões de contatos, localização, câmera ou armazenamento.</p>
+  <h2>8. Segurança</h2>
+  <p>Os dados ficam na área privada do app no Android, inacessível a outros apps. O app não solicita permissões de contatos, localização, câmera ou armazenamento: as fotos são tiradas pelo app de câmera do próprio aparelho ou escolhidas na galeria, e só quando você toca no botão. Toda comunicação com o Google é criptografada.</p>
 
-  <h2>8. Alterações</h2>
+  <h2>9. Alterações</h2>
   <p>Esta política pode ser atualizada; a data no topo indica a versão vigente.</p>
 
-  <h2>9. Contato</h2>
+  <h2>10. Contato</h2>
   <p>Dúvidas sobre privacidade: <a href="mailto:rifocamargo@gmail.com">rifocamargo@gmail.com</a>.</p>
 </body>
 </html>
